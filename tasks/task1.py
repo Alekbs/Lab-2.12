@@ -14,6 +14,7 @@
 
 def list_sort(func):
     def wrapper(s):
+        print(func(s))
         return sorted(func(s))
 
     return wrapper
@@ -21,6 +22,7 @@ def list_sort(func):
 
 @list_sort
 def get_list(s):
+    f = []
     return [int(i) for i in s.split()]
 
 
